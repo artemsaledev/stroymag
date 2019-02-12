@@ -2,6 +2,7 @@
 $white: #ffffff;
 $black: #000000;
 
+$main-bg-color: #f2f2f2;
 // Sizes
 $base-font-size: 16px;
 
@@ -16,6 +17,7 @@ $breakpoints: (
   "desktop-wide": 1440px
 );
 
-$content-size: 1024px;
+$content-size: 1240px;
 
 // Fonts
+$main-font: 'opensans', Arial, sans-serif;

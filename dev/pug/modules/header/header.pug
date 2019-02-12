@@ -1,1 +1,21 @@
 header.header
+	.header-top
+		.location.header-top__location
+			span.location__current Выбранный Город
+		include ../navigation/main-nav
+		.user-nav.header-top__user-nav
+			a(href="").user-nav__link Войти
+.header-main
+	.catalog.header-main__catalog
+		.sandwich
+			.sandwich__line.sandwich__line--top
+			.sandwich__line.sandwich__line--middle
+			.sandwich__line.sandwich__line--bottom
+		span.catalog__title Каталог материалов
+	.search.header-main__search
+		input(placeholder="Наименование товара").input-field
+	.order-callback
+		span.order-callback__description Звоните круглосуточно
+		a(href="tel:+390977474545").order-callback__phone +390977474545
+		a(href="").order-callback__link
+	include ../basket/basket-prev

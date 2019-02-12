@@ -8,7 +8,11 @@ html {
   height: 100%;
 }
 
-body { height: 100%; }
+body { 
+  background-color: $main-bg-color;
+  font-family: $main-font;
+  height: 100%; 
+}
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
@@ -51,6 +55,7 @@ button { outline: none; }
 .container {
   margin: 0 auto;
   max-width: $content-size;
+  padding: 0 80px;
   width: 100%;
 }
 
