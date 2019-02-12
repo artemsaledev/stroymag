@@ -1,0 +1,13 @@
+.main-nav {
+	&__list {
+		display: flex;
+		& > * {
+			&:not(:last-child) {margin-right: 40px;}
+		}
+	}
+	&__item {
+		font-size: 12px;
+		letter-spacing: 0.65px;
+		text-transform: uppercase;
+	}
+}
