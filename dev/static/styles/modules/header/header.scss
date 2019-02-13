@@ -14,6 +14,12 @@
 	}
 	&-main {
 		background-color: $dark-bg-color;
+		color: $white;
 		padding: 20px 0;
+		.container {
+			& > * {
+				&:not(:last-child) {margin-right: 40px;}
+			}
+		}
 	}
 }

@@ -1,6 +1,8 @@
 .location {
-	flex: 0 0 165px;
-	width: 165px;
+	$locationWidth: 175px;
+	flex: 0 0 $locationWidth;
+	max-width: $locationWidth;
+	width: 175px;
 	&__header {
 		cursor: pointer;
 		align-items: center;
@@ -8,6 +10,10 @@
 		& > * {
 			&:not(:last-child) {margin-right: 10px;}
 		}
+	}
+	&__icon {
+		@include size(16px);
+		fill: $base-text-color;
 	}
 	&__current {
 		align-items: center;

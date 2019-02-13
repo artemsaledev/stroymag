@@ -6,9 +6,30 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: 'opensans-light';
+	src: url('../fonts/opensans/opensans-light.woff2') format('woff2'),
+	url('../fonts/opensans/opensans-light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'opensansbold';
 	src: url('../fonts/opensans/opensansbold.woff2') format('woff2'),
 	url('../fonts/opensans/opensansbold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'opensans-semibold';
+	src: url('../fonts/opensans/opensans-semibold.woff2') format('woff2'),
+	url('../fonts/opensans/opensans-semibold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'opensans-extrabold';
+	src: url('../fonts/opensans/opensans-extrabold.woff2') format('woff2'),
+	url('../fonts/opensans/opensans-extrabold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }

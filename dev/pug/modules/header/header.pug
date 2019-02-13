@@ -3,6 +3,7 @@ header.header
 		.container
 			.location.header-top__location
 				.location__header
+					+icon('map','location__icon')
 					span.location__current Выбранный Город
 				.location__body
 			include ../navigation/main-nav
@@ -10,16 +11,15 @@ header.header
 				a(href="").user-nav__link Войти
 	.header-main
 		.container
-			.catalog.header-main__catalog
-				.sandwich
-					.sandwich__line.sandwich__line--top
-					.sandwich__line.sandwich__line--middle
-					.sandwich__line.sandwich__line--bottom
-				span.catalog__title Каталог материалов
+			.logo
+				img(src="static/images/general/logo.svg").logo__img
+				span.logo__text Продажа материалов
+			include ../navigation/catalog-nav
 			.search.header-main__search
-				input(placeholder="Наименование товара").input-field
-			.order-callback
+				input(placeholder="Наименование товара").input-field.input-field--size-small
+				+icon('search', 'search__icon')
+			.order-callback.header-main__order-callback
 				span.order-callback__description Звоните круглосуточно
 				a(href="tel:+390977474545").order-callback__phone +390977474545
-				a(href="").order-callback__link
+				a(href="").order-callback__link Заказать звонок
 			include ../basket/basket-prev

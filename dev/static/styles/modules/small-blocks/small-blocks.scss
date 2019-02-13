@@ -1,1 +1,44 @@
 @import "location";
+
+.logo {
+	display: flex;
+	$logoWidth: 175px;
+	flex: 0 0 $logoWidth;
+	max-width: $logoWidth;
+	flex-direction: column;
+	font-size: 12px;
+}
+.search {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	& > * {
+		&:not(:last-child) {margin-right: 10px;}
+	}
+	&__icon {
+		@include size(22px);
+		fill: $white;
+	}
+	.input-field {
+		flex: 0 0 220px;
+		width: 220px;
+	}
+}
+.order-callback {
+	display: flex;
+	flex-direction: column;
+	&__description {font-size: 12px;}
+	&__link {
+		color: $white;
+		font-size: 14px;
+		text-decoration: underline;
+		font-family: $medium-font;
+	}
+	&__phone {
+		color: $main-action-color;
+		font-family: $boldest-font;
+		font-size: 24px;
+		line-height: 1.5;
+		white-space: nowrap;
+	}
+}
