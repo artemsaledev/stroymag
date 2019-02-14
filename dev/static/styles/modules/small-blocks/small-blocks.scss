@@ -1,5 +1,6 @@
 @import "location";
 @import "banner";
+@import "section";
 
 .logo {
 	display: flex;
@@ -56,3 +57,8 @@
 		margin-bottom: 20px;
 	}
 }
+.count-text {
+		color: $text-info-color;
+		font-size: 14px;
+		margin-left: 5px;
+	}

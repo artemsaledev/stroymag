@@ -1,0 +1,38 @@
+.advantages {
+	display: flex;
+	& > * {
+		flex: 1;
+		&:not(:last-child) {margin-right: 30px;}
+	}
+}
+
+.advantage {
+	display: flex;
+	& > * {
+		&:not(:last-child) {margin-right: 15px;}
+	}
+	&__icon {
+		fill: $main-action-color;
+		@include size(50px);
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		font-family: $medium-font;
+		margin-bottom: 4px;
+	}
+	&__text {
+		color: $text-info-color;
+		font-size: 14px;
+		letter-spacing: .25px;
+	}
+	&__link {
+		font-size: 14px;
+		font-family: $medium-font;
+		margin-top: 8px;
+		letter-spacing: .25px;
+		text-decoration: underline; 
+	}
+}

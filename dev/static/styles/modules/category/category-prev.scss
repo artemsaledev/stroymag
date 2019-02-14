@@ -19,7 +19,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		height: 180px;
+		height: 260px;
 	}
 	&__body {
 		padding: 15px;
@@ -30,11 +30,6 @@
 		font-size: 22px;
 		font-family: $bold-font;
 		}
-	}
-	&__count {
-		color: $text-info-color;
-		font-size: 14px;
-		margin-left: 5px;
 	}
 	&__item {
 		margin-bottom: 10px;

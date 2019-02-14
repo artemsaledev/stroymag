@@ -1,0 +1,32 @@
+.actions-prev {
+	display: flex;
+	& > * {
+		flex: 1;
+		&:not(:last-child) {margin-right: 30px;}
+	}
+}
+.action-prev {
+	border-radius: 4px;
+	overflow: hidden;
+	&__header {
+		align-items: flex-end;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		height: 185px;
+		padding: 20px;
+	}
+	&__body {
+		background-color: $white;
+		padding: 15px 20px;
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		font-family: $medium-font;
+		font-size: 22px;
+	}
+}
