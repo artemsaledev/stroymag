@@ -1,4 +1,5 @@
 @import "location";
+@import "banner";
 
 .logo {
 	display: flex;
@@ -40,5 +41,18 @@
 		font-size: 24px;
 		line-height: 1.5;
 		white-space: nowrap;
+	}
+}
+.title {
+	&-page {
+		font-family: $medium-font;
+		font-size: 40px;
+		line-height: 1.25;
+	}
+	&-section {
+		font-family: $medium-font;
+		font-size: 40px;
+		line-height: 1.25;
+		margin-bottom: 20px;
 	}
 }
