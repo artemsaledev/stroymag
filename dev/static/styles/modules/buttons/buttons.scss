@@ -1,9 +1,20 @@
 .btn {
+	align-items: center;
 	background-color: $main-action-color;
 	border: 0;
 	border-radius: 4px;
 	cursor: pointer;
+	display: flex;
 	font-family: $medium-font;
 	line-height: 20px;
 	padding: 10px 20px;
+	& > * {
+		&:not(:last-child) {margin-right: 10px;}
+	}
+	&__icon {
+		@include size(25px);
+	}
+	&.btn {
+		&--fill { width: 100%; justify-content: center; border-radius: 0;}
+	}
 }
