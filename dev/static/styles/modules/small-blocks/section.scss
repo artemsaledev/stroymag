@@ -1,12 +1,14 @@
-.s-bg-white {
-	background-color: $white;
+.s {
+	&-bg-white { background-color: $white; }
+	&-popular-categories { padding-bottom: 10px; }
+	&-sales-leaders { padding-bottom: 20px; }
 }
+
 .section-header {
 	align-items: center;
 	display: flex;
-	&__right {
-		margin-left: auto;
-	}
+	margin-bottom: 20px;
+	&__right { margin-left: auto; }
 	&__link {
 		color: $link-color;
 		font-family: $medium-font;

@@ -1,6 +1,7 @@
 @import "location";
 @import "banner";
 @import "section";
+@import "sales-leader";
 
 .logo {
 	display: flex;
@@ -54,7 +55,6 @@
 		font-family: $medium-font;
 		font-size: 40px;
 		line-height: 1.25;
-		margin-bottom: 20px;
 	}
 }
 .count-text {

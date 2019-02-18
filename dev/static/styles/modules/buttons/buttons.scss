@@ -8,6 +8,9 @@
 	font-family: $medium-font;
 	line-height: 20px;
 	padding: 10px 20px;
+	&:hover {
+		background-color: #f0de01;
+	}
 	& > * {
 		&:not(:last-child) {margin-right: 10px;}
 	}
@@ -16,5 +19,6 @@
 	}
 	&.btn {
 		&--fill { width: 100%; justify-content: center; border-radius: 0;}
+		&--disabled {opacity: .5;}
 	}
 }
