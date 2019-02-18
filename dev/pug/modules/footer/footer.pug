@@ -1,1 +1,68 @@
+mixin footerNavLink(link, text, descr)
+	li.footer-nav__item
+		a(href=link).footer-nav__link=text
+		if(descr)
+			span.footer-nav__descr=descr
+
 footer.footer
+	.footer-top
+		.container
+			.footer-callback
+				img(src="static/images/general/wikipedia.png" alt="Фото иконки википедии").footer-callback__img
+				.order-callback.footer-callback__order-callback
+					span.order-callback__description Звоните круглосуточно
+					a(href="tel:+390977474545").order-callback__phone +390977474545
+					a(href="").order-callback__link.link--white.link--underline Заказать звонок
+			.footer-main
+				.footer__col
+					span.footer__title О нас
+					ul.footer-nav__list
+						+footerNavLink('','Оплата и доставка','')
+						+footerNavLink('','Гарантия','')
+						+footerNavLink('','Дополнительные услуги','')
+						+footerNavLink('','История компании','')
+						+footerNavLink('','Контакты','связь с директором')
+				.footer__col
+					span.footer__title Каталог
+					ul.footer-nav__list
+						+footerNavLink('','Вcё для покупателя','')
+						+footerNavLink('','Для организаций','')
+						+footerNavLink('','Категория товаров СЕО','')
+						+footerNavLink('','Категория товаров СЕО','')
+				.footer__col
+					.footer__block
+						span.footer__title Принимаем к оплате
+						.payment-types
+							ul.payment-types__list
+								li.payment-types__item
+									+icon('visa', 'payment-types__logo')
+								li.payment-types__item
+									+icon('mastercard', 'payment-types__logo')
+								li.payment-types__item
+									+icon('paypal', 'payment-types__logo')
+							a(href="").link--underline.link--yellow Оплата заказа онлайн
+					.footer__block
+						span Акции и спецпредложения
+				.footer__col
+					.footer__block
+						span.footer__title Контакты
+						.footer-contacts
+							+icon('map', 'footer-contacts__icon')
+							span.footer-contacts__title Офис
+						p.footer-contacts__text 111000, Город ул.Неизвестная, д.22, стр.3 
+							a(href="").footer-contacts__link на карте
+					.footer__block
+						.footer-contacts
+							+icon('map', 'footer-contacts__icon')
+							span.footer-contacts__title Производство и склад
+						p.footer-contacts__text Далёкая область, Сумрачный район, г.Закрытоящик, Южная промзона, "Заводской Комплекс"
+							a(href="").footer-contacts__link на карте
+	.footer-bottom
+		.container
+			.footer-bottom__line
+				span.copyright LTD "Company Best"
+				a(href="").footer-bottom__link Политика конфиденциальности
+				a(href="").footer-bottom__link Карта сайта
+			.footer-bottom__line
+				p.footer-bottom__text Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой
+				p.footer-bottom__text Для получения подробной информации о наличии, видах, характеристиках и стоимости материалов, пожалуйста, обращайтесь в отдел продаж.

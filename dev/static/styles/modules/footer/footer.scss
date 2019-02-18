@@ -1,1 +1,124 @@
 footer { flex: 0 0 auto; }
+
+.footer {
+	&-top {
+		background-color: $dark-bg-color;
+		color: $white; 
+		padding: 30px 0;
+		.container {
+			& > * { 
+				margin: 40px 0;
+				&:first-child { margin-top: 0px; }
+				&:last-child { margin-bottom: 0px; }
+			}
+		}
+	}
+	&-main {
+		display: flex;
+		& > * {
+			flex: 1;
+			&:not(:last-child) { margin-right: 20px;}
+		}
+	}
+	&-bottom {
+		background-color: $darkest-bg-color;
+		color: rgba($white, .6);
+		font-size: 12px;
+		padding: 10px 0;
+		.container {
+				& > * {
+				margin: 10px 0;
+				&:first-child {margin-top: 0;}
+				&:last-child {margin-bottom: 0;}
+			}
+		}
+		&__line {
+			& > * {&:not(:last-child) {margin-right: 30px;}}
+		}
+		&__link {text-decoration: underline;}
+	}
+	&-callback {
+		align-items: center;
+		display: flex;
+		& > * {
+			&:not(:last-child) {margin-right: 20px;}
+		}
+		&__img {
+			width: 70px;
+			height: 70px;
+		}
+	}
+	&-contacts {
+		position: relative;
+		padding-left: 25px;
+		&__icon {
+			@include size(16px);
+			fill: $white;
+			left: 0px;
+			position: absolute;
+			top: 0;
+		}
+		&__title {
+			display: block;
+			font-size: 14px;
+			font-family: $medium-font;
+			margin-bottom: 10px;
+		}
+		&__text { font-size: 12px; line-height: 1.25;}
+		&__link {
+			color: $white;
+			margin-left: 5px;
+			text-decoration: underline;
+		}
+	}
+	&-nav {
+		&__list {
+			& > * {
+				margin: 10px 0;
+				&:first-child {margin-top: 0;}
+				&:last-child {margin-bottom: 0;}
+			}
+		}
+		&__item { 
+			font-size: 14px; 
+			& > * {
+				&:not(:last-child) { margin-right: 10px;}
+			}
+		}
+		&__descr {
+			color: rgba($white, .6);
+			font-size: 12px;
+		}
+		&__link {
+			color: $white;
+		}
+	}
+	&__title {
+		display: block;
+		font-family: $bold-font;
+		margin-bottom: 15px;
+	}
+	&__block {
+		margin-bottom: 40px;
+		&:last-child { margin-bottom: 0; }
+	}
+}
+
+.payment-types {
+	& > * {
+		margin: 5px 0;
+		&:first-child {margin-top: -10px;}
+		&:last-child {margin-bottom: 0;}
+	}
+	&__list { 
+		display: flex;
+			& > * {
+				&:not(:last-child) { margin-right: 10px;}
+		}
+	}
+	&__logo {
+		@include size(60px);
+	    fill: #ffffff;
+	}
+}
+

@@ -1,6 +1,8 @@
 .link {
 	color: $base-text-color;
 	font-family: $medium-font;
+	&:hover { color: $link-color-hover;}
+	&:visited { color: $link-color-visited;}
 	&--white {
 		color: $white;
 		font-family: $medium-font;
@@ -8,7 +10,11 @@
 	&--green {
 		color: $link-color;
 		font-family: $medium-font;
-		&:hover{color: $link-color-hover;}
+		&:hover { color: $link-color-hover;}
+	}
+	&--yellow {
+		color: $main-action-color;
+		font-family: $medium-font;
 	}
 	&--underline {text-decoration: underline;}
 }
