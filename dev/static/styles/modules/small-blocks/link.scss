@@ -1,0 +1,14 @@
+.link {
+	color: $base-text-color;
+	font-family: $medium-font;
+	&--white {
+		color: $white;
+		font-family: $medium-font;
+	}
+	&--green {
+		color: $link-color;
+		font-family: $medium-font;
+		&:hover{color: $link-color-hover;}
+	}
+	&--underline {text-decoration: underline;}
+}

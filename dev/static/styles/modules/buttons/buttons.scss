@@ -18,7 +18,7 @@
 		@include size(25px);
 	}
 	&.btn {
-		&--fill { width: 100%; justify-content: center; border-radius: 0;}
+		&--fill { width: 100%; justify-content: center;}
 		&--disabled {opacity: .5;}
 	}
 }

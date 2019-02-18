@@ -3,4 +3,16 @@ section.s-product-slider.s-bg-white
 		.section-header
 			h2.title-section Вы смотрели
 			.section-header__right
-		.product-slider
+				span.product-slider__count
+		.product-prev-slider
+			.slider-nav.slider-nav--prev
+				+icon('back', 'slider-nav__icon')
+			.slider-nav.slider-nav--next
+				+icon('next', 'slider-nav__icon')
+			.js-product-slider
+				include ../../modules/product/prev1
+				include ../../modules/product/prev1
+				include ../../modules/product/prev1
+				include ../../modules/product/prev1
+				include ../../modules/product/prev1
+				include ../../modules/product/prev1

@@ -2,6 +2,7 @@
 	&-bg-white { background-color: $white; }
 	&-popular-categories { padding-bottom: 10px; }
 	&-sales-leaders { padding-bottom: 20px; }
+	&-questions {padding: 10px 0;}
 }
 
 .section-header {
@@ -9,9 +10,4 @@
 	display: flex;
 	margin-bottom: 20px;
 	&__right { margin-left: auto; }
-	&__link {
-		color: $link-color;
-		font-family: $medium-font;
-		text-decoration: underline;
-	}
 }

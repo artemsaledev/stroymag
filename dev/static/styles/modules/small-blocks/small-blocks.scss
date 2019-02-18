@@ -1,4 +1,5 @@
 @import "location";
+@import "link";
 @import "banner";
 @import "section";
 @import "sales-leader";
@@ -32,10 +33,7 @@
 	flex-direction: column;
 	&__description {font-size: 12px;}
 	&__link {
-		color: $white;
 		font-size: 14px;
-		text-decoration: underline;
-		font-family: $medium-font;
 	}
 	&__phone {
 		color: $main-action-color;
@@ -61,4 +59,76 @@
 		color: $text-info-color;
 		font-size: 14px;
 		margin-left: 5px;
+}
+.slider-nav {
+	cursor: pointer;
+	opacity: .5;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all linear .3s;
+	&:hover { opacity: 1; }
+	&.slider-nav {
+		&--prev { left: 55px; }
+		&--next { right: 55px; }
 	}
+	&.slick-disabled {
+		cursor: default;
+		&:hover { opacity: .5;}
+	}
+	&__icon {
+		@include size(30px);
+		fill: $base-text-color;
+	}
+}
+.upgrade {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	& > * {
+		&:not(:last-child) {margin-right: 10px;}
+	}
+	&__icon {
+		@include size(15px);
+		fill: $white;
+		&-wrapper {
+			@include size(15px);
+			align-items: center;
+			background-color: $text-info-color;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+.questions {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.ask-your-question {
+	display: flex;
+	align-items: center;
+	& > * {
+		&:not(:last-child) {margin-right: 30px;}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		& > * {
+		&:not(:last-child) {margin-right: 20px;}
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		& > * {
+		&:not(:last-child) {margin-right: 10px;}
+		}
+	}
+	&__icon {
+		@include size(24px);
+		fill: $base-text-color;
+	}
+}

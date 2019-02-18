@@ -1,0 +1,19 @@
+mixin askYourQuestion(icon,text,link)
+	li.ask-your-question__item
+		a(href=link).ask-your-question__link
+			+icon(icon,'ask-your-question__icon')
+			span.ask-your-question__text=text
+
+section.s-questions
+	.container
+		.questions
+			.upgrade
+				.upgrade__icon-wrapper
+					+icon('help-round', 'upgrade__icon')
+				a(href="").link.link--underline Что можно улучшить на этой странице?
+			.ask-your-question
+				span.ask-your-question__title Задайте вопрос
+				ul.ask-your-question__list
+					+askYourQuestion('messenger','Messenger','')
+					+askYourQuestion('vk','Vkontakte','')
+					+askYourQuestion('telegram','Telegram','')
