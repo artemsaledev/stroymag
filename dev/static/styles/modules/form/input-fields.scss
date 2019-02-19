@@ -1,16 +1,17 @@
 .input-field {
 	background-color: $white;
-	border-radius: 4px;
 	border: 1px solid $input-border-color;
+	border-radius: 4px;
 	box-shadow: none;
 	height: 50px;
 	padding: 10px 15px;
-	@include placeholder {
-		color: $text-info-color;
-	}
-	&.input-fields--size-small {
+	width: 100%;
+	@include placeholder {color: $text-info-color;}
+	&.input-field--size {
+		&-s {
 		font-size: 14px;
 		line-height: 20px;
 		height: 40px;
+		}
 	}
 }

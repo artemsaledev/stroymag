@@ -7,15 +7,21 @@ let uglify = require('gulp-uglify'),
 
 module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
-        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js', 
-            'node_modules/slick-carousel/slick/slick.min.js'])
+        return $.gulp.src([
+            'node_modules/svg4everybody/dist/svg4everybody.min.js', 
+            'node_modules/slick-carousel/slick/slick.min.js',
+            'node_modules/simplebar/dist/simplebar.min.js',
+            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'])
             .pipe(concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.ouput));
     });
 
     $.gulp.task('libsJS:build', () => {
-        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
-            'node_modules/slick-carousel/slick/slick.min.js'])
+        return $.gulp.src([
+            'node_modules/svg4everybody/dist/svg4everybody.min.js',
+            'node_modules/slick-carousel/slick/slick.min.js',
+            'node_modules/simplebar/dist/simplebar.min.js',
+            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput));

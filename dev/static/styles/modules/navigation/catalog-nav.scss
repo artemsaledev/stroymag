@@ -75,7 +75,7 @@
 			overflow: hidden;
 		}
 		&:hover {
-			.catalog-subnav { display: flex; }
+			.catalog-subnav { display: block; }
 		}
 	}	
 }
@@ -88,13 +88,18 @@
 	border-radius: 0 4px 4px 0;
 	display: none;
 	left: calc(100% - 2px);
-	overflow: auto;
 	padding: 15px 20px 0;
 	position: absolute;
 	top: 0;
 	width: 675px;
-	& > * {
-		&:not(:last-child) {margin-right: 30px;}
+	.simplebar-vertical {
+		margin: 10px 10px 10px 0;
+	}
+	&__inner {
+		display: flex;
+		& > * {
+			&:not(:last-child) {margin-right: 30px;}
+		}
 	}
 	&__col {
 		flex: 1;

@@ -1,11 +1,7 @@
 header.header
 	.header-top
 		.container
-			.location.header-top__location
-				.location__header
-					+icon('map','location__icon')
-					span.location__current Ваш Город
-				.location__body
+			include location
 			include ../navigation/main-nav
 			.user-nav.header-top__user-nav
 				a(href="").user-nav__link.link--green Войти
@@ -16,7 +12,7 @@ header.header
 				span.logo__text Продажа материалов
 			include ../navigation/catalog-nav
 			.search.header-main__search
-				input(placeholder="Наименование товара").input-field.input-field--size-small
+				input(placeholder="Наименование товара").input-field.input-field--size-s
 				+icon('search', 'search__icon')
 			.order-callback.header-main__order-callback
 				span.order-callback__description Звоните круглосуточно

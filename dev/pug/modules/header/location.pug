@@ -1,0 +1,24 @@
+.location.header-top__location
+	.location__header
+		+icon('map','location__icon')
+		span.location__current Ваш Город
+	.location__body
+		.location-question
+			span.location-question__text Ваш регион доставки Далекий Город?
+			.location-question__buttons
+				.btn.btn--bg-green.btn--size-s.location-question__btn(data-location="yes") Да, верно
+				.btn.btn--border-green.btn--size-s.location-question__btn(data-location="no") Нет, уточнить регион
+		.location-choose
+			.location-choose__header
+				input(placeholder="Поиск по городу или индексу").input-field.input-field--size-s
+			.location-choose__body
+				ul.location-choose__list
+					li.location-choose__item Москва
+					li.location-choose__item Киев
+					li.location-choose__item Астана
+					li.location-choose__item Варшава
+					li.location-choose__item Минск
+					li.location-choose__item Ереван
+					li.location-choose__item Кишинев
+					li.location-choose__item Рига
+					li.location-choose__item Хельсинки
