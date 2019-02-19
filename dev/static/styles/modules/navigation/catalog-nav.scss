@@ -1,4 +1,7 @@
 .catalog-nav {
+	&--active {
+		.catalog-nav__body { display: block; }
+	}
 	&__header {
 		display: flex;
 		align-items: center;
@@ -7,5 +10,118 @@
 		& > * {
 		&:not(:last-child) {margin-right: 10px;}
 		}
+	}
+	&__body {
+		background-color: $white;
+		border-radius: 4px;
+		box-shadow: 0 0 0 5px 0 rgba(159, 197, 178, 0.5);
+		color: $base-text-color;
+		display: none;
+		left: 80px;
+		position: absolute;
+		top: calc(100% - 5px);
+		z-index: 1;
+		&:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0px 10px 10px 10px;
+			border-color: transparent transparent $white transparent;
+			position: absolute;
+			left: 217px;
+			top: -9px;
+		}
+	}
+	&__list {
+		position: relative;
+		width: 255px;	
+	}
+	&__label {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		padding: 6px 25px 6px 15px;
+		position: relative;
+		transition: all linear .2s;
+		&:hover { background-color: $main-action-color; }
+		& > * {
+			&:not(:last-child) { margin-right: 5px; }
+		}
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 0px 5px 5px;
+			border-color: transparent transparent transparent $base-text-color;
+			position: absolute;
+			right: 20px;
+			top: 10px;
+		}
+		&-text {
+			font-family: $medium-font;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+	&__item {
+		&:first-child {
+			border-radius: 4px 4px 0px 0px;
+			overflow: hidden;
+		}
+		&:last-child {
+			border-radius: 0px 0px 4px 4px;
+			overflow: hidden;
+		}
+		&:hover {
+			.catalog-subnav { display: flex; }
+		}
+	}	
+}
+
+.catalog-subnav {
+	background-color: $white;
+	border-left: 1px solid $main-action-color;
+	// box-shadow: 0 0 0 5px 0 rgba(159, 197, 178, 0.5);
+	bottom: 0;
+	border-radius: 0 4px 4px 0;
+	display: none;
+	left: calc(100% - 2px);
+	overflow: auto;
+	padding: 15px 20px 0;
+	position: absolute;
+	top: 0;
+	width: 675px;
+	& > * {
+		&:not(:last-child) {margin-right: 30px;}
+	}
+	&__col {
+		flex: 1;
+		& > * {
+		margin: 30px 0;
+		&:first-child {margin-top: 0px;}
+		&:last-child {margin-bottom: 0px;}
+		}
+	}
+	&__header {
+		margin-bottom: 10px;
+	}
+	&__title {
+		font-family: $bold-font;
+		font-size: 18px;
+		line-height: 26px;
+	}
+	&__list {
+		& > * {
+		margin: 10px 0;
+		&:first-child {margin-top: 0px;}
+		&:last-child {margin-bottom: 15px;}
+		}
+	}
+	&__item {
+		font-family: $medium-font;
+		font-size: 14px;
+		line-height: 18px;
 	}
 }

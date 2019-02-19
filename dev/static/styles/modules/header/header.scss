@@ -17,6 +17,7 @@
 		color: $white;
 		padding: 20px 0;
 		.container {
+			position: relative;
 			& > * {
 				&:not(:last-child) {margin-right: 40px;}
 			}

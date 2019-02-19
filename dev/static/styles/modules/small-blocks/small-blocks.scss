@@ -11,6 +11,9 @@
 	max-width: $logoWidth;
 	flex-direction: column;
 	font-size: 12px;
+	&__img {
+		height: 45px;
+	}
 }
 .search {
 	display: flex;

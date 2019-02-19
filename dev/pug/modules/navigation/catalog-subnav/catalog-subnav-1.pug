@@ -1,0 +1,41 @@
+mixin catalogSubnavItem(link,text,icon)
+	li.catalog-subnav__item
+		a(href=link).catalog-subnav__link
+			span.catalog-subnav__text=text
+			span.count-text=count
+
+.catalog-subnav
+	.catalog-subnav__col
+		.catalog-subnav__block
+			.catalog-subnav__header
+				span.catalog-subnav__title Группа повседневных товаров
+				span.count-text 123
+			ul.catalog-subnav__list
+				+catalogSubnavItem('','Повседневный предмет быта','')
+				+catalogSubnavItem('','Товар для каждого','')
+				+catalogSubnavItem('','Товар для всей семьи','')
+				+catalogSubnavItem('','Товар для особенных','')
+		.catalog-subnav__block
+			.catalog-subnav__header
+				span.catalog-subnav__title Группа сезонных товаров
+				span.count-text 123
+			ul.catalog-subnav__list
+				+catalogSubnavItem('','Повседневный предмет быта','')
+				+catalogSubnavItem('','Товар для каждого','')
+				+catalogSubnavItem('','Товар для всей семьи','')
+				+catalogSubnavItem('','Товар для особенных','')
+	.catalog-subnav__col
+		.catalog-subnav__block
+			.catalog-subnav__header
+				span.catalog-subnav__title Группа уникальных товаров
+				span.count-text 123
+			ul.catalog-subnav__list
+				+catalogSubnavItem('','Повседневный предмет быта','')
+				+catalogSubnavItem('','Товар для каждого','')
+				+catalogSubnavItem('','Товар для всей семьи','')
+				+catalogSubnavItem('','Товар для особенных','')
+				+catalogSubnavItem('','Товар для независимых','')
+				+catalogSubnavItem('','Товар для мужчин','')
+				+catalogSubnavItem('','Товар для женщин','')
+				+catalogSubnavItem('','Товар для детей','')
+				+catalogSubnavItem('','Товар для целевой группы','')

@@ -35,7 +35,10 @@ footer { flex: 0 0 auto; }
 		&__line {
 			& > * {&:not(:last-child) {margin-right: 30px;}}
 		}
-		&__link {text-decoration: underline;}
+		&__link {
+			color: $white;
+			text-decoration: underline;
+		}
 	}
 	&-callback {
 		align-items: center;
@@ -64,7 +67,7 @@ footer { flex: 0 0 auto; }
 			font-family: $medium-font;
 			margin-bottom: 10px;
 		}
-		&__text { font-size: 12px; line-height: 1.25;}
+		&__text { font-size: 12px; line-height: 1.45; }
 		&__link {
 			color: $white;
 			margin-left: 5px;
