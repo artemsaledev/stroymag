@@ -1,0 +1,20 @@
+.file-upload {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	input[type="file"] {display: none;}
+	&__custom {
+		color: #1fa349; //hex
+		font-family: $bold-font;
+		font-size: 14px;
+		display: flex;
+		& > * {
+			&:not(:last-child) { margin-right: 10px; }
+		}
+	}
+	&__icon {
+		fill: #1fa349; //hex
+		height: 16px;
+		width: 12px; 
+	}
+}

@@ -57,16 +57,25 @@ $(document).ready(function () {
 			if(answer === 'no') {
 				$(this).closest('.location__body').addClass('is-location-choose');
 			}
-		})
+		});
 		$(document).on('click','.location-choose__item', function () {
 			$(this).closest('.location__body').removeClass('is-location-choose');
-		})
+		});
 		$(document).on('click','.location__header', function () {
 			$(this).siblings('.location__body').addClass('is-location-choose');
 		})
 	};
+	var popupLink = function () {
+		$('.js-popup-link').magnificPopup({
+			showCloseBtn: false
+		});
+		$(document).on('click','.popup__close', function () {
+			$.magnificPopup.close()
+		})
+	};
 
 	sandwich();
+	popupLink();
 	popularCategoriesSlider();
 	productPrevSlider();
 	catalogNavHover();

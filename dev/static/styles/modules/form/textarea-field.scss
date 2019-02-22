@@ -1,22 +1,10 @@
-.input-field {
+.textarea-field {
 	background-color: $white;
 	border: 1px solid $input-border-color;
 	border-radius: 4px;
 	box-shadow: none;
-	height: 50px;
+	height: 100px;
 	padding: 10px 15px;
 	width: 100%;
 	@include placeholder {color: $text-info-color;}
-	&.input-field {
-		&--size {
-			&-s {
-			font-size: 14px;
-			line-height: 20px;
-			height: 40px;
-			}
-		}
-		&--width {
-			&-s { max-width: 245px; }
-		}
-	}
 }

@@ -1,0 +1,36 @@
+.popup {
+	border-radius: 8px;
+	max-width: 520px;
+	margin: 50px auto;
+	position: relative;
+	&__title {
+		font-size: 18px;
+		line-height: 1.44;
+	}
+	&__header {
+		align-items: center;
+		background-color: $light-bg-color;
+		display: flex;
+		padding: 15px 25px 15px 40px;
+	}
+	&__close {
+		@include size(30px);
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		margin-left: auto;
+		opacity: .2;
+		&:hover { opacity: .7; }
+		&-icon {@include size(16px)}
+	}
+	&__body {
+		background-color: $white;
+		padding: 40px;
+	}
+}
+
+.mfp-bg {
+	background-color: $base-text-color;
+	opacity: .3;
+}

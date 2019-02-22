@@ -1,1 +1,46 @@
 @import 'input-fields';
+@import 'textarea-field';
+@import 'file-upload';
+@import "form-group";
+
+.form {
+	&__body {
+		margin-bottom: 30px;
+		& > * {
+			margin: 20px 0;
+			&:first-child {margin-top: 0;}
+			&:last-child {margin-bottom: 0;}
+		}
+	}
+	&__footer {
+		& > * {
+			margin: 10px 0;
+			&:first-child {margin-top: 0;}
+			&:last-child {margin-bottom: 0;}
+		}
+	}
+	&-line {
+		align-items: center;
+		display: flex;
+		& > * {
+			&:not(:last-child) {margin-right: 20px;}
+		}
+		&__info {
+			font-size: 14px;
+			margin-left: 20px;
+			&.form-line__info {
+				&--color {
+					&-green { color: #1fa349; }
+				}
+			}
+		}
+	}
+	&-info {
+		color: $text-info-color;
+		font-size: 12px;
+		&__link {
+			color: $text-info-color;
+			text-decoration: underline;
+		}
+	}
+}
