@@ -11,7 +11,8 @@ module.exports = function () {
             'node_modules/svg4everybody/dist/svg4everybody.min.js', 
             'node_modules/slick-carousel/slick/slick.min.js',
             'node_modules/simplebar/dist/simplebar.min.js',
-            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'])
+            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+            'node_modules/jquery-validation/dist/jquery.validate.min.js'])
             .pipe(concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.ouput));
     });
@@ -21,7 +22,8 @@ module.exports = function () {
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
             'node_modules/slick-carousel/slick/slick.min.js',
             'node_modules/simplebar/dist/simplebar.min.js',
-            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'])
+            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+            'node_modules/jquery-validation/dist/jquery.validate.min.js'])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput));

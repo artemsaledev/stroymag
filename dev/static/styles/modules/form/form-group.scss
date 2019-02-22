@@ -19,7 +19,10 @@
 		}
 	}
 		&--width {
-			&-m {max-width: 245px;}
+			&-m {
+				flex: 0 0 245px;
+				max-width: 255px;
+			}
 		}
 	}
 	&__label { 

@@ -1,37 +1,34 @@
-.popup.mfp-hide#popup-consultation
+.popup.mfp-hide#popup-upgrade
 	.hide-on-success
 		.popup__header
-			span.popup__title Получить консультацию
+			span.popup__title Что можно улучшить на этой странице?
 			.popup__close
 				+icon('close', 'popup__close-icon')
 		.popup__body
 			form.form
 				.form__body
 					.form-line
+						.form-group.form-group--required
+							label.form-group__label Вопрос или комментарий
+							textarea(placeholder="Здравствуйте, на этой странице можно" name="req-textarea").textarea-field
+					.form-line
+						.form-group.form-group--width-m
+							label.form-group__label Электронная почта
+							input(placeholder="Введите свой email" type="email" name="email").input-field
+						span.form-line__info.form-line__info--size-s Мы быстрее исправим ошибку если сможем связаться с вами, для уточнения информации
+					.form-line
 						.form-group.form-group--width-m.form-group--required
 							label.form-group__label Контактный телефон
 							input(placeholder="+3(8011)123-34-45" type="phone" name="phone").input-field
-					.form-line
-						.form-group
-							label.form-group__label Вопрос или комментарий
-							textarea(placeholder="Здравствуйте, меня интересует").textarea-field
-					.form-line
-						.form-group
-							label.file-upload
-								input(type="file")
-								.file-upload__custom
-									+icon('attach', 'file-upload__icon')
-									span.file-upload__text Прикрепить файл
 				.form__footer
 					.form-line
 						.form-group.form-group--width-m
-							input(type="submit" value="Получить консультацию").btn.btn--size-l.btn--fill
-						span.form-line__info.form-line__info--color-green Ответим в течение 10 минут
+							input(type="submit" value="Предложить улучшение").btn.btn--size-l.btn--fill
 					.form-line
 						p.form-info Задавая вопрос, вы соглашаетесь с <a href="" class="form-info__link">политикой конфиденциальности </a>
 	.show-on-success
 		.popup__header
-			span.popup__title Мы Вам перезвоним
+			span.popup__title Что можно улучшить на этой странице?
 			.popup__close
 				+icon('close', 'popup__close-icon')
 		.popup__body

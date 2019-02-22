@@ -6,5 +6,9 @@
 	height: 100px;
 	padding: 10px 15px;
 	width: 100%;
-	@include placeholder {color: $text-info-color;}
+	&::placeholder { color: $text-info-color; }
+	&.error {
+		border-color: $warning-color;
+		&::placeholder { color: $warning-color; }
+	}
 }
