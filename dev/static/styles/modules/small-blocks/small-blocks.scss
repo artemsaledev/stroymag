@@ -3,6 +3,7 @@
 @import "banner";
 @import "section";
 @import "sales-leader";
+@import "review-line";
 
 .logo {
 	display: flex;
@@ -72,8 +73,8 @@
 	transition: all linear .3s;
 	&:hover { opacity: 1; }
 	&.slider-nav {
-		&--prev { left: 55px; }
-		&--next { right: 55px; }
+		&--prev { left: -55px; }
+		&--next { right: -55px; }
 	}
 	&.slick-disabled {
 		cursor: default;

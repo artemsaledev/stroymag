@@ -65,6 +65,7 @@ $(document).ready(function () {
 			$(this).siblings('.location__body').addClass('is-location-choose');
 		})
 	};
+
 	var popupLink = function () {
 		$('.js-popup-link').magnificPopup({
 			showCloseBtn: false
@@ -106,6 +107,24 @@ $(document).ready(function () {
 		});
 	};
 
+		var reviewLine = function () {	
+			$(document).on('click', '.review-line__number', function () {
+				var left = $(this).parent().position().left;
+				$(this).parent().siblings().removeClass('review-line__item--active');
+				$(this).parent().addClass('review-line__item--active');
+				$('.review-line').css('width', left - 1)
+			})
+		};
+
+		var contactsPopup = function () {
+			$(document).on('click', '.contacts-popup__toggle', function () {
+				$(this).parent().addClass('contacts-popup--active')
+			});
+			$(document).on('click', '.contacts-popup__close', function () {
+				$(this).closest('.contacts-popup').removeClass('contacts-popup--active')
+			})
+		};
+
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
@@ -113,6 +132,8 @@ $(document).ready(function () {
 	locationChoose();
 	popupLink();
 	formValidate();
+	reviewLine();
+	contactsPopup();
 });
 
 var popularCategoriesSlider = function () {
@@ -131,3 +152,43 @@ var popularCategoriesSlider = function () {
 $(window).on('resize',function() {
 	popularCategoriesSlider();
 });
+
+if($('div').is('.contacts-popup__map')) {
+	ymaps.ready(function () {
+    var myMapOffice = new ymaps.Map('popup-contacts-office', {
+            center: [49.992167, 36.231202],
+            zoom: 11
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark(myMapOffice.getCenter(), {
+        }, {
+        	iconLayout: 'default#image',
+            iconImageHref: 'static/images/general/map-dot.png',
+            iconImageSize: [32, 32],
+        });
+
+    myMapOffice.geoObjects
+        .add(myPlacemark);
+    myMapOffice.behaviors.disable('scrollZoom');
+    myMapOffice.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullscreenControl').remove('rulerControl');
+
+    var myMapStock = new ymaps.Map('popup-contacts-stock', {
+            center: [47.992167, 30.231202],
+            zoom: 11
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark2 = new ymaps.Placemark(myMapStock.getCenter(), {
+        }, {
+        	iconLayout: 'default#image',
+            iconImageHref: 'static/images/general/map-dot.png',
+            iconImageSize: [32, 32],
+        });
+
+    myMapStock.geoObjects
+        .add(myPlacemark2);
+    myMapStock.behaviors.disable('scrollZoom');
+    myMapStock.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullscreenControl').remove('rulerControl');
+});
+}

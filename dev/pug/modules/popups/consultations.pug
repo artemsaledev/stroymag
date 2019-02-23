@@ -42,7 +42,7 @@
 						span.form-success__number 1234
 					p.form-success__description Менеджер позвонит на указанный телефон сегодня до <b>14:43</b>
 				.form-success__block
-					span.form-success__label Не готовы ждать?
+					span.popup__subtitle Не готовы ждать?
 					.form-success__row
 						.form-success__col
 							.form-success-contacts
@@ -55,3 +55,22 @@
 								+icon('email', 'form-success-contacts__icon')
 								span.form-succes-contacts__text Напишите нам email
 								a(href="mailto:question@yoursite.ru").link--green question@yoursite.ru
+			form.form.fast-review-form
+				span.popup__subtitle Насколько быстро вы нашли нужный товар?
+				.review-line__wrapper
+					.review-line
+					.review-line__inner
+						.review-line__item.review-line__item--descr-left.review-line__item--active(data-fast-review="очень долго")
+							span.review-line__number 1
+						.review-line__item.review-line__item--descr-left(data-fast-review="долго")
+							span.review-line__number 2
+						.review-line__item.review-line__item--descr-center(data-fast-review="нормально")
+							span.review-line__number 3
+						.review-line__item.review-line__item--descr-right(data-fast-review="быстро")
+							span.review-line__number 4
+						.review-line__item.review-line__item--descr-right(data-fast-review="очень быстро")
+							span.review-line__number 5
+				.fast-review-form__line
+					.form-group.form-group--width-l
+						input(placeholder="Комментарий (необязательно)").input-field
+					input(type="submit" value="Отправить").btn.btn--size-l

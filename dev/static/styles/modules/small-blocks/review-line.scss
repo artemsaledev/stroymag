@@ -1,0 +1,71 @@
+
+.review-line {
+	background-color: $main-action-color;
+	height: 5px;
+	left: 1px;
+	position: absolute;
+	top: 30px;
+	transition: all linear .3s;
+	width: 0;
+	z-index: 1;
+	&__wrapper {
+		margin: 0 10px;
+		padding: 30px 0;
+		position: relative;
+	}
+	&__inner {
+		align-items: flex-end;
+		background-color: $input-border-color;
+		display: flex;
+		justify-content: space-between;
+		height: 5px;
+	}
+	&__item {
+		border-left: 1px solid #dedede;
+		height: 20px;
+		margin-bottom: -5px;
+		position: relative;
+		&.review-line__item {
+			&--active {
+				.review-line__number { background-color: $main-action-color; } 
+			}
+			&--descr {
+				&-right {
+					&:before {
+					left: auto;
+					right: 0;
+					}
+				}
+				&-center {
+					&:before {
+					left: -50%;
+					transform: translateX(-50%);
+					}
+				}
+			}
+		}
+		&:before {
+			content: attr(data-fast-review);
+			color: $text-info-color;
+			display: block;
+			font-size: 12px;
+			left: 0;
+			position: absolute;
+			top: -20px;
+			white-space: nowrap;
+		}
+	}
+	&__number {
+		border-radius: 50%;
+		cursor: pointer;
+		font-size: 14px;
+		left: -12px;
+		line-height: 24px;
+		height: 24px;
+		position: absolute;
+		text-align: center;
+		top: 100%;
+		width: 24px;
+		&:hover { background-color: $white; }
+	}
+}

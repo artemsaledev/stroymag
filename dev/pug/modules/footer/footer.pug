@@ -42,21 +42,53 @@ footer.footer
 									+icon('paypal', 'payment-types__logo')
 							a(href="").link--underline.link--yellow Оплата заказа онлайн
 					.footer__block
-						span Акции и спецпредложения
+						.footer-action
+							span.footer-action__title Акции и спецпредложения
+							.action-tooltip
+								+icon('gift', 'action-tooltip__icon')
+								span.action-tooltip__text Крутой приз в подарок до 31 декабря!
 				.footer__col
 					.footer__block
 						span.footer__title Контакты
 						.footer-contacts
 							+icon('map', 'footer-contacts__icon')
 							span.footer-contacts__title Офис
-						p.footer-contacts__text 111000, Город ул.Неизвестная, д.22, стр.3 
-							a(href="").footer-contacts__link на карте
+							.footer-contacts__text 111000, Городок ул.Неизвестная, д.22, стр.3 
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#popup-contacts-office
+										.contacts-popup__info
+											.contacts-popup__close
+												+icon('close', 'contacts-popup__close-icon')
+											span.contacts-popup__title Центральный офис в столице
+											span.contacts-popup__text 111333, Город, ул. Разбитых фонарей, дом 15, этаж 10 
+											.contacts-popup__block
+												span.contacts-popup__label Время работы:
+												span.contacts-popup__text пн-пт 9:00 - 18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру на QR - код
+												img(src="static/images/general/wikipdia.png" alt="QR код").contacts-popup__qr-image
 					.footer__block
 						.footer-contacts
 							+icon('map', 'footer-contacts__icon')
 							span.footer-contacts__title Производство и склад
-						p.footer-contacts__text Далёкая область, Сумрачный район, г.Закрытоящик, Южная промзона, "Заводской Комплекс"
-							a(href="").footer-contacts__link на карте
+							.footer-contacts__text Далёкая область, Сумрачный район, г.Закрытоящик, Южная промзона, "Заводской Комплекс"
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#popup-contacts-stock
+										.contacts-popup__info
+											.contacts-popup__close
+												+icon('close', 'contacts-popup__close-icon')
+											span.contacts-popup__title Производство и склад
+											span.contacts-popup__text Далёкая область, Сумрачный район, г.Закрытоящик, Южная промзона, "Заводской Комплекс"
+											.contacts-popup__block
+												span.contacts-popup__label Время работы:
+												span.contacts-popup__text пн-пт 9:00 - 18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру на QR - код
+												img(src="static/images/general/wikipdia.png" alt="QR код").contacts-popup__qr-image
 	.footer-bottom
 		.container
 			.footer-bottom__line

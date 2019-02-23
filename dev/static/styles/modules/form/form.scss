@@ -79,11 +79,6 @@
 			}
 		 }
 		&__description {font-size: 14px;}
-		&__label { 
-			display: block;
-			font-size: 18px;
-			margin-bottom: 20px;
-		}
 		&__number { font-family: $bold-font; }
 		&-contacts {
 			display: flex;
@@ -103,6 +98,22 @@
 				top: 0;
 			}
 			&__link {font-size: 12px;}
+		}
+	}
+}
+
+.fast-review-form {
+	background-color: $light-bg-color;
+	padding: 20px 40px 30px;
+	& > * {
+		margin: 20px 0;
+		&:first-child { margin-top: 0px; }
+		&:last-child { margin-bottom: 0px; }
+		}
+	&__line {
+		display: flex;
+		& > * {
+			&:not(:last-child) { margin-right: 10px; }
 		}
 	}
 }

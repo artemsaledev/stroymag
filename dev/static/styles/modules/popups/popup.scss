@@ -7,6 +7,12 @@
 		font-size: 18px;
 		line-height: 1.44;
 	}
+	&__subtitle { 
+			display: block;
+			font-size: 18px;
+			line-height: 1.44;
+			margin-bottom: 20px;
+		}
 	&__header {
 		align-items: center;
 		background-color: $light-bg-color;
