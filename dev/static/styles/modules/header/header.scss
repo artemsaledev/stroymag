@@ -9,6 +9,11 @@
 		}
 		&__location {
 			margin-right: 80px;
+			@media screen and (max-width: $tablet-size) { 
+				margin-right: 20px;
+				flex: 0 0 155px;
+				width: 155px;
+			}
 		}
 		padding: 12px 0;
 	}

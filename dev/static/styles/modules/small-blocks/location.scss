@@ -3,6 +3,10 @@
 	flex: 0 0 $locationWidth;
 	position: relative;
 	width: $locationWidth;
+	@media screen and (max-width: $tablet-size) { 
+				flex: 0 0 155px;
+				width: 155px;
+			}
 	&__header {
 		cursor: pointer;
 		align-items: center;

@@ -2,7 +2,10 @@
 	&__list {
 		display: flex;
 		& > * {
-			&:not(:last-child) {margin-right: 40px;}
+			&:not(:last-child) {
+				margin-right: 40px;
+				@media screen and (max-width: $tablet-size) { margin-right: 20px;}
+			}
 		}
 	}
 	&__item {

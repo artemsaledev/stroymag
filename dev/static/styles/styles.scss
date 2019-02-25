@@ -64,6 +64,9 @@ button { outline: none; }
   max-width: $content-size;
   padding: 0 80px;
   width: 100%;
+  @media screen and (max-width: $tablet-size) {
+    padding: 0 20px;
+  }
 }
 
 //Модули
